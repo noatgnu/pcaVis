@@ -43,8 +43,8 @@ export class ScatterPlotComponent implements OnInit {
             x: [], y: [], type: 'scatter', name: r.Samples, mode: 'markers'
           }
         }
-        temp[r.Samples].y.push(r.PCA2)
-        temp[r.Samples].x.push(r.PCA1)
+        temp[r.Samples].y.push(r.PCA1)
+        temp[r.Samples].x.push(r.PCA2)
       }
     } else {
       for (const r of this._data) {

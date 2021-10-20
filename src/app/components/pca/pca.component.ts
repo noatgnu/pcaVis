@@ -34,8 +34,9 @@ export class PcaComponent implements OnInit {
     console.log(pca.getCumulativeVariance())
     console.log(pca.getLoadings())
     console.log(pca.getExplainedVariance())
-    const vectors = pca.predict(this.matrix, {nComponents: 2}).to2DArray()
+    const result = pca.predict(this.matrix, {nComponents: 2})
 
+    const vectors = result.to2DArray()
     const temp = []
     for (let i = 0; i<this.samples.length; i++) {
       temp.push({"Samples": this.samples[i], "PCA1": vectors[i][0], "PCA2": vectors[i][1]})
